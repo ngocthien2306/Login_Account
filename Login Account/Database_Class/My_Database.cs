@@ -9,7 +9,7 @@ namespace Login_Account
 {
     class My_Database
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Thien Nguyen\Downloads\Learning Document\HKII_2020-2021\Window Programming\Day1_24-2-2021\Practice\Data_Login.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-US6D43H;Initial Catalog=Manager_Student;Integrated Security=True");
         public SqlConnection Getcon
         {
             get { return this.con; }

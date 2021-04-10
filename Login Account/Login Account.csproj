@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +48,38 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Word, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Word.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Data.Tools.ExceptionMessageBox, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,38 +89,188 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddStudentForm.cs">
+    <Compile Include="FormData\CourseForm\Addcourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStudentForm.Designer.cs">
+    <Compile Include="FormData\CourseForm\Addcourse.Designer.cs">
+      <DependentUpon>Addcourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\CourseForm\EditCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormData\CourseForm\EditCourse.Designer.cs">
+      <DependentUpon>EditCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\CourseForm\ListCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormData\CourseForm\ListCourse.Designer.cs">
+      <DependentUpon>ListCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\CourseForm\Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormData\CourseForm\Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\CourseForm\PrintCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormData\CourseForm\PrintCourse.Designer.cs">
+      <DependentUpon>PrintCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\Student\AddStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormData\Student\AddStudentForm.Designer.cs">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Course_ItemClass\Course.cs" />
+    <Compile Include="FormData\Student\Edit_Remove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormData\Student\Edit_Remove.Designer.cs">
+      <DependentUpon>Edit_Remove.cs</DependentUpon>
     </Compile>
-    <Compile Include="School .cs">
+    <Compile Include="FormData\Login\ProgressBarForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="School .Designer.cs">
+    <Compile Include="FormData\Login\ProgressBarForm.Designer.cs">
+      <DependentUpon>ProgressBarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\Student\RichTextToSaveStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormData\Student\RichTextToSaveStudent.Designer.cs">
+      <DependentUpon>RichTextToSaveStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\Login\SignIn_Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormData\Login\SignIn_Account.Designer.cs">
+      <DependentUpon>SignIn_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\Student\Print_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormData\Student\Print_Student.Designer.cs">
+      <DependentUpon>Print_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\Student\Statics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormData\Student\Statics.Designer.cs">
+      <DependentUpon>Statics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormData\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_StudentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manager_StudentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_StudentDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manager_StudentDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_StudentDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manager_StudentDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Student_ItemClass\Process.cs" />
+    <Compile Include="Sql\DataSetStatics.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetStatics.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sql\Data_LoginDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data_LoginDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\Student\ManagermentStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormData\Student\ManagermentStudent.Designer.cs">
+      <DependentUpon>ManagermentStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormData\Login\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\Student\List Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormData\Student\List Student.Designer.cs">
+      <DependentUpon>List Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormData\School .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormData\School .Designer.cs">
       <DependentUpon>School .cs</DependentUpon>
     </Compile>
-    <Compile Include="My_Database.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Database_Class\My_Database.cs" />
+    <Compile Include="Student_ItemClass\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
-    <EmbeddedResource Include="AddStudentForm.resx">
+    <Compile Include="Student_ItemClass\Student.cs" />
+    <Compile Include="Student_ItemClass\User.cs" />
+    <EmbeddedResource Include="FormData\CourseForm\Addcourse.resx">
+      <DependentUpon>Addcourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormData\CourseForm\EditCourse.resx">
+      <DependentUpon>EditCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormData\CourseForm\ListCourse.resx">
+      <DependentUpon>ListCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormData\CourseForm\PrintCourse.resx">
+      <DependentUpon>PrintCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormData\Student\AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormData\Student\Edit_Remove.resx">
+      <DependentUpon>Edit_Remove.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="School .resx">
+    <EmbeddedResource Include="FormData\Student\ManagermentStudent.resx">
+      <DependentUpon>ManagermentStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormData\Login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormData\Student\List Student.resx">
+      <DependentUpon>List Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormData\Login\ProgressBarForm.resx">
+      <DependentUpon>ProgressBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormData\Student\RichTextToSaveStudent.resx">
+      <DependentUpon>RichTextToSaveStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormData\School .resx">
       <DependentUpon>School .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormData\Student\Print_Student.resx">
+      <DependentUpon>Print_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormData\Student\Statics.resx">
+      <DependentUpon>Statics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormData\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,7 +280,67 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="FormData\Login\SignIn_Account.resx">
+      <DependentUpon>SignIn_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Manager_StudentDataSet.xsc">
+      <DependentUpon>Manager_StudentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Manager_StudentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Manager_StudentDataSet.xss">
+      <DependentUpon>Manager_StudentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet1.xsc">
+      <DependentUpon>Manager_StudentDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Manager_StudentDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Manager_StudentDataSet1.xss">
+      <DependentUpon>Manager_StudentDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet21.xsc">
+      <DependentUpon>Manager_StudentDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Manager_StudentDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Manager_StudentDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Manager_StudentDataSet21.xss">
+      <DependentUpon>Manager_StudentDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Sql\DataSetStatics.xsc">
+      <DependentUpon>DataSetStatics.xsd</DependentUpon>
+    </None>
+    <None Include="Sql\DataSetStatics.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetStatics.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Sql\DataSetStatics.xss">
+      <DependentUpon>DataSetStatics.xsd</DependentUpon>
+    </None>
+    <None Include="Sql\Data_LoginDataSet.xsc">
+      <DependentUpon>Data_LoginDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sql\Data_LoginDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data_LoginDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sql\Data_LoginDataSet.xss">
+      <DependentUpon>Data_LoginDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,8 +354,36 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Login.jpg" />
+    <None Include="Resources\Login1.jpg" />
+    <None Include="Resources\signin.jpg" />
+    <Content Include="Resources\school.ico" />
+    <Content Include="Resources\sign_in_account.jpg" />
+    <None Include="Resources\sign_in_account1.jpg" />
+    <Content Include="Sql\Data_Login.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sql\Data_Login_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Data_Login.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

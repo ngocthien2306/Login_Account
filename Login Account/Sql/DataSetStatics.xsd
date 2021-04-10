@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetStatics" targetNamespace="http://tempuri.org/DataSetStatics.xsd" xmlns:mstns="http://tempuri.org/DataSetStatics.xsd" xmlns="http://tempuri.org/DataSetStatics.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetStatics" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetStatics" msprop:Generator_UserDSName="DataSetStatics">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataSet" msprop:Generator_TableClassName="DataSetDataTable" msprop:Generator_TableVarName="tableDataSet" msprop:Generator_TablePropName="DataSet" msprop:Generator_RowDeletingName="DataSetRowDeleting" msprop:Generator_RowChangingName="DataSetRowChanging" msprop:Generator_RowEvHandlerName="DataSetRowChangeEventHandler" msprop:Generator_RowDeletedName="DataSetRowDeleted" msprop:Generator_UserTableName="DataSet" msprop:Generator_RowChangedName="DataSetRowChanged" msprop:Generator_RowEvArgName="DataSetRowChangeEvent" msprop:Generator_RowClassName="DataSetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:string" minOccurs="0" />
+              <xs:element name="Male" msprop:Generator_ColumnVarNameInTable="columnMale" msprop:Generator_ColumnPropNameInRow="Male" msprop:Generator_ColumnPropNameInTable="MaleColumn" msprop:Generator_UserColumnName="Male" type="xs:string" minOccurs="0" />
+              <xs:element name="Female" msprop:Generator_ColumnVarNameInTable="columnFemale" msprop:Generator_ColumnPropNameInRow="Female" msprop:Generator_ColumnPropNameInTable="FemaleColumn" msprop:Generator_UserColumnName="Female" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="DataSetKey1">
+      <xs:selector xpath=".//mstns:DataSet" />
+      <xs:field xpath="mstns:Total" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
